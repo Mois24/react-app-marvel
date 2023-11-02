@@ -10,7 +10,7 @@ class RandomChar extends Component {
     state = {
         char: {},
         loading: true,
-        error: false
+        error: false,
     }
 
     marvelService = new MarvelService();
