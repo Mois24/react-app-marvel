@@ -18,12 +18,12 @@ const CharInfo = (props) => {
     }, [props.charId]);
 
     const updateChar = () => {
-        clearError();
         const {charId} = props;
         if (!charId) {
             return;
         }
 
+        clearError();
         getCharacter(charId)
             .then(onCharLoaded)
     }
