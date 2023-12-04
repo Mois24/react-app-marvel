@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
-import Spinner from '../spinner/Spinner';
+import NewSpinner from '../newSpinner/NewSpinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import useMarvelService from '../../services/MarvelService';
 
@@ -61,7 +61,7 @@ const ComicsList = () => {
 
     const items = renderItems(comicsList);
     const errorMessage = error ? <ErrorMessage/> : null;
-    const spinner = loading && !newItemLoading ? <Spinner/> : null;
+    const spinner = loading && !newItemLoading ? <NewSpinner/> : null;
 
     return (
         <div className="comics__list">
